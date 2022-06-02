@@ -13,10 +13,11 @@ def sendPacket():
    try:
        s.connect((R_IP , R_PORT)) 
        print ("Connected to server")
-       s.sendall(message)   
-       print ("SIP request sent to server")                                    
+       #s.sendall(message)   
+       #print ("SIP request sent to server")                                    
    except socket.error:
-       pass
+       #pass
+       print ("Not able to connect to server")
    finally:
        s.close()
 
